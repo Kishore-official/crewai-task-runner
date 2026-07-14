@@ -1,54 +1,55 @@
-# AiLatestDevelopment Crew
+<div align="center">
 
-Welcome to the AiLatestDevelopment Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+# 📄 CrewAI Research & Report Writer
 
-## Installation
+### A 3-agent pipeline that researches a topic and writes a formatted markdown report
 
-Ensure you have Python >=3.10 <3.13 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
+[![CrewAI](https://img.shields.io/badge/CrewAI-Multi--Agent-FF5A1F?style=for-the-badge)](https://crewai.com/)
+[![Python](https://img.shields.io/badge/Python-3.10--3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![OpenAI](https://img.shields.io/badge/LLM-OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com/)
 
-First, if you haven't already, install uv:
+[![Agents](https://img.shields.io/badge/Agents-3-blueviolet?style=flat-square)](#the-crew)
+[![uv](https://img.shields.io/badge/Managed_with-uv-DE5FE9?style=flat-square)](https://docs.astral.sh/uv/)
+
+</div>
+
+A [CrewAI](https://crewai.com) crew (`AiLatestDevelopment`) that takes a topic and the current year as input, researches it, expands the findings into a full report, and writes the final markdown output to disk.
+
+## 🤖 The Crew
+
+| Agent | Role |
+|---|---|
+| 🔍 **Researcher** | Finds the 10 most relevant, up-to-date bullet points on the given topic |
+| 📊 **Reporting Analyst** | Expands each finding into a full report section |
+| 📝 **File Writer** | Formats and writes the final report as markdown |
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Agent Framework | CrewAI |
+| LLM | OpenAI |
+| Dependency management | uv |
+| Config | YAML (`agents.yaml`, `tasks.yaml`) |
+
+## 🚀 Getting Started
 
 ```bash
+# Install uv
 pip install uv
-```
 
-Next, navigate to your project directory and install the dependencies:
-
-(Optional) Lock the dependencies and install them by using the CLI command:
-```bash
+# Install dependencies
 crewai install
-```
-### Customizing
 
-**Add your `OPENAI_API_KEY` into the `.env` file**
+# Add your OPENAI_API_KEY to .env
 
-- Modify `src/ai_latest_development/config/agents.yaml` to define your agents
-- Modify `src/ai_latest_development/config/tasks.yaml` to define your tasks
-- Modify `src/ai_latest_development/crew.py` to add your own logic, tools and specific args
-- Modify `src/ai_latest_development/main.py` to add custom inputs for your agents and tasks
-
-## Running the Project
-
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
-
-```bash
-$ crewai run
+# Run the crew
+crewai run
 ```
 
-This command initializes the ai-latest-development Crew, assembling the agents and assigning them tasks as defined in your configuration.
+Customize via `agents.yaml`, `tasks.yaml`, `crew.py`, and `main.py` (topic/year inputs).
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
+## 📬 Contact
 
-## Understanding Your Crew
-
-The ai-latest-development Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
-
-## Support
-
-For support, questions, or feedback regarding the AiLatestDevelopment Crew or crewAI.
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
-
-Let's create wonders together with the power and simplicity of crewAI.
+- **Email:** arunkishore757@gmail.com
+- **GitHub:** [@Kishore-official](https://github.com/Kishore-official)
